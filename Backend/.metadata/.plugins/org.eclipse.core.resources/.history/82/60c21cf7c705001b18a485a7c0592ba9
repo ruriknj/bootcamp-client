@@ -29,7 +29,7 @@ public class ClienteResource {
 		list.add(new Client(1L, "Maria Silva", "12345678901", 6500.0, birthDate, 3));
 	*/
 		
-		List<ClientDTO> list = service.findAll();
+		List<ClientDTO> list 	= service.findAll();
 		return ResponseEntity.ok().body(list);
 
 	}
