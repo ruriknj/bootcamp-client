@@ -37,8 +37,6 @@ public class ClientService {
 	
 	@Transactional(readOnly = true)
 	public ClientDTO findById(Long id) {
-		Optional<Client> obj = repository.findById(id); // optional -> evita trabalhar com valor nulo
-		Client entity = obj.get();
-		return new ClientDTO(entity);
+		Optional<Client> entity = repository.findById(id); // optional -> evita trabalhar com valor nulo
  	}
 }

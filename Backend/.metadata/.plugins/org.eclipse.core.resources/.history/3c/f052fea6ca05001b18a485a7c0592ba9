@@ -16,7 +16,7 @@ import com.br.ruriknj.resources.services.ClientService;
 @RestController // transforma a classe no resoucr REST
 @RequestMapping(value = "/clients") //
 public class ClienteResource {
-
+	
 	@Autowired
 	private ClientService service;
 
@@ -32,13 +32,8 @@ public class ClienteResource {
 		List<ClientDTO> list = service.findAll();
 		return ResponseEntity.ok().body(list);
 	}
+	
 
-	@GetMapping(value = "/{id}")
-	public ResponseEntity<ClientDTO> findById(@PathVariable Long id) {
-		ClientDTO dto = service.findById(id);
-		return ResponseEntity.ok().body(dto);
-
-	}
 
 
 }

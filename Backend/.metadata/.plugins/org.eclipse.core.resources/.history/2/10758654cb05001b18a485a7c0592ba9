@@ -34,9 +34,9 @@ public class ClienteResource {
 	}
 
 	@GetMapping(value = "/{id}")
-	public ResponseEntity<ClientDTO> findById(@PathVariable Long id) {
+	public ResponseEntity<ClientDTO> findById(PathVariable Long id) {
 		ClientDTO dto = service.findById(id);
-		return ResponseEntity.ok().body(dto);
+		return ResponseEntity.ok().body(list);
 
 	}
 
