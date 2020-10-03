@@ -24,13 +24,11 @@ public class ClienteResource {
 	@GetMapping
 	public ResponseEntity<List<Client>> findAll() {
 
-	/*	List<Client> list = new ArrayList<>();
+		List<Client> list = new ArrayList<>();
 		Instant birthDate = Instant.parse("1994-07-20T10:30:00Z");
 
 		list.add(new Client(1L, "Maria Silva", "12345678901", 6500.0, birthDate, 3));
-	*/
-		
-		List<Client> list 	= service.findAll();
+
 		return ResponseEntity.ok().body(list);
 
 	}
