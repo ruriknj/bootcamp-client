@@ -11,8 +11,6 @@ import javax.persistence.EntityNotFoundException;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.dao.DataIntegrityViolationException;
 import org.springframework.dao.EmptyResultDataAccessException;
-import org.springframework.data.domain.Page;
-import org.springframework.data.domain.PageRequest;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
@@ -37,7 +35,7 @@ public class ClientService {
 	@Transactional(readOnly = true) // usa-se para o metodo de somente leitura ->( readOnly = true)
 	public Page<ClientDTO> findAllPaged(PageRequest pageRequest) {
 		Page<Client> list = repository.findAll(pageRequest);
-		return list.map(X -> new ClientDTO(X)); // passou a list do Client para o ClientDTO
+		return list.map(X -> new ClientDTO(X));; // passou a list do Client para o ClientDTO
 	}
 
 	@Transactional(readOnly = true)

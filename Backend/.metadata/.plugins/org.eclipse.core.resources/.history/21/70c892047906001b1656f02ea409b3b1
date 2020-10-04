@@ -30,6 +30,10 @@ public class ClienteResource {
 
 	@Autowired
 	private ClientService service;
+
+	@GetMapping
+	public ResponseEntity<List<ClientDTO>> findAll() {
+
 		/*
 		 * List<Client> list = new ArrayList<>(); Instant birthDate =
 		 * Instant.parse("1994-07-20T10:30:00Z");
@@ -38,7 +42,7 @@ public class ClienteResource {
 		 */
 
 		@GetMapping
-		public ResponseEntity<Page<ClientDTO>> findAll(
+		public ResponseEntity<Page<CLientDTO>> findAll(
 				
 				@RequestParam(value = "page", defaultValue = "0") Integer page,
 				@RequestParam(value = "linesPerPage", defaultValue = "12") Integer linesPerPage,

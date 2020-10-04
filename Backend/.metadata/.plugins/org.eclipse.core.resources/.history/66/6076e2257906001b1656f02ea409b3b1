@@ -30,6 +30,10 @@ public class ClienteResource {
 
 	@Autowired
 	private ClientService service;
+
+	@GetMapping
+	public ResponseEntity<List<ClientDTO>> findAll() {
+
 		/*
 		 * List<Client> list = new ArrayList<>(); Instant birthDate =
 		 * Instant.parse("1994-07-20T10:30:00Z");
