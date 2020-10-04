@@ -44,7 +44,7 @@ public class ClientService {
 		Client entity = obj.orElseThrow(() -> new ResourceNotFoundException("Cliente não encontrado"));
 		return new ClientDTO(entity);
 	}
-
+	
 	@Transactional
 	public ClientDTO salvar(ClientDTO dto) {
 		Client entity = new Client();
@@ -59,7 +59,7 @@ public class ClientService {
 
 	@Transactional
 	public ClientDTO atualizar(Long id, ClientDTO dto) {
-		// Atualizar sem precisar ir no banco de dados -> getOne(id)
+		//Atualizar sem precisar ir no banco de dados -> getOne(id)
 		try {
 			Client entity = repository.getOne(id);
 			entity.setName(dto.getName());
@@ -67,12 +67,14 @@ public class ClientService {
 			entity.setIncome(dto.getIncome());
 			entity.setBirthDate(dto.getBirthDate());
 			entity.setChildren(dto.getChildren());
-			return new ClientDTO(entity);
-
+			
 		} catch (EntityNotFoundException e) {
 			throw new ResourceNotFoundException("Id não encontrado " + id);
 		}
-
+	
+		
+		return null;
+		
 	}
 
 }

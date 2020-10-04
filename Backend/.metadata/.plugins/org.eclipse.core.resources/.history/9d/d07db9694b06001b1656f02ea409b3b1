@@ -1,11 +1,8 @@
 package com.br.ruriknj.resources.services;
 
 import java.util.ArrayList;
-
 import java.util.List;
 import java.util.Optional;
-
-import javax.persistence.EntityNotFoundException;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -14,7 +11,7 @@ import org.springframework.transaction.annotation.Transactional;
 import com.br.ruriknj.dto.ClientDTO;
 import com.br.ruriknj.entities.Client;
 import com.br.ruriknj.repositories.ClientRepository;
-import com.br.ruriknj.resources.services.exceptions.ResourceNotFoundException;
+import com.br.ruriknj.resources.services.exceptions.EntityNotFoundException;
 
 //registrar a class como um componente de injeção de independencia (gerenciar as injeções de dependências)
 @Service
@@ -41,10 +38,10 @@ public class ClientService {
 	@Transactional(readOnly = true)
 	public ClientDTO findById(Long id) {
 		Optional<Client> obj = repository.findById(id); // optional -> evita trabalhar com valor nulo
-		Client entity = obj.orElseThrow(() -> new ResourceNotFoundException("Cliente não encontrado"));
+		Client entity = obj.orElseThrow(() -> new EntityNotFoundException("Cliente não encontrado"));
 		return new ClientDTO(entity);
 	}
-
+	
 	@Transactional
 	public ClientDTO salvar(ClientDTO dto) {
 		Client entity = new Client();
@@ -59,20 +56,16 @@ public class ClientService {
 
 	@Transactional
 	public ClientDTO atualizar(Long id, ClientDTO dto) {
-		// Atualizar sem precisar ir no banco de dados -> getOne(id)
-		try {
-			Client entity = repository.getOne(id);
-			entity.setName(dto.getName());
-			entity.setCpf(dto.getCpf());
-			entity.setIncome(dto.getIncome());
-			entity.setBirthDate(dto.getBirthDate());
-			entity.setChildren(dto.getChildren());
-			return new ClientDTO(entity);
-
-		} catch (EntityNotFoundException e) {
-			throw new ResourceNotFoundException("Id não encontrado " + id);
-		}
-
+		//Atualizar sem precisar ir no banco de dados -> getOne(id)
+		Client entity = repository.getOne(id);
+		entity.setName(dto.getName());
+		entity.setCpf(dto.getCpf());
+		entity.setIncome(dto.getIncome());
+		entity.setBirthDate(dto.getBirthDate());
+		entity.setChildren(dto.getChildren());
+		repository.save(entity);
+		return new ClientDTO(entity);
+		
 	}
 
 }
