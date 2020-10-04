@@ -18,7 +18,6 @@ INDEX VERSION 1.131+C:\DEVSUPERIOR\BootCamp\Modulo 1\Projetos\Modulo_1\Backend\.
 242338153.index
 2117419983.index
 4147916033.index
-3610027271.index
 2965529282.index
 522594033.index
 2637387000.index

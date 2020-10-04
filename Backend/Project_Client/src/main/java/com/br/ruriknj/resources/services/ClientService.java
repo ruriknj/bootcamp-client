@@ -1,5 +1,6 @@
 package com.br.ruriknj.resources.services;
 
+import java.time.Instant;
 import java.util.ArrayList;
 
 import java.util.List;
@@ -50,12 +51,16 @@ public class ClientService {
 
 	@Transactional
 	public ClientDTO salvar(ClientDTO dto) {
+		
+	//	final Instant UpdatebirthDate =  Instant.now();
+	
 		Client entity = new Client();
 		entity.setName(dto.getName());
 		entity.setCpf(dto.getCpf());
 		entity.setIncome(dto.getIncome());
 		entity.setBirthDate(dto.getBirthDate());
 		entity.setChildren(dto.getChildren());
+		entity.setUpdatebirthDate(dto.getUpdatebirthDate());
 		repository.save(entity);
 		return new ClientDTO(entity);
 	}
@@ -76,6 +81,7 @@ public class ClientService {
 			throw new ResourceNotFoundException("Id não encontrado " + id);
 		}
 
+		
 	}
 
 	public void retirar(Long id) {

@@ -5,18 +5,19 @@ import java.time.Instant;
 
 import com.br.ruriknj.entities.Client;
 
-public class ClientDTO  implements Serializable {
+public class ClientDTO implements Serializable {
 	private static final long serialVersionUID = 1L;
-	
+
 	private Long id;
 	private String name;
 	private String cpf;
 	private Double income;
 	private Instant birthDate;
 	private Integer children;
+	private Instant updatebirthDate;
 
 	public ClientDTO() {
-		
+
 	}
 
 	public ClientDTO(Long id, String name, String cpf, Double income, Instant birthDate, Integer children) {
@@ -27,7 +28,7 @@ public class ClientDTO  implements Serializable {
 		this.birthDate = birthDate;
 		this.children = children;
 	}
-	
+
 	public ClientDTO(Client entity) {
 		this.id = entity.getId();
 		this.name = entity.getName();
@@ -84,4 +85,14 @@ public class ClientDTO  implements Serializable {
 	public void setChildren(Integer children) {
 		this.children = children;
 	}
+
+	public Instant getUpdatebirthDate() {
+		return updatebirthDate;
+	}
+
+	public void setUpdatebirthDate(Instant updatebirthDate) {
+		this.updatebirthDate = updatebirthDate;
+		if (this.updatebirthDate == null) updatebirthDate = updatebirthDate.now();
+	}
+
 }
