@@ -41,5 +41,17 @@ public class ClientService {
 		Client entity = obj.orElseThrow(() -> new EntityNotFoundException("Cliente não encontrado"));
 		return new ClientDTO(entity);
 	}
+	
+	@Transactional
+	public ClientDTO salvar(ClientDTO dto) {
+		Client entity = new Client();
+		entity.setName(dto.getName());
+		entity.setCpf(dto.getCpf());
+		entity.setIncome(dto.getIncome());
+		entity.setBirthDate(dto.getBirthDate());
+		entity.setChildren(dto.getChildren());
+		repository.save(entity);
+		return new ClientDTO(entity);
+	}
 
 }
