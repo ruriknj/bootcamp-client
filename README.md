@@ -3,7 +3,7 @@
 <p>Project made by mayself.<p>
 This was first task accomplished BootCamp course.
 
-<h2>Technology used:<h2> 
+<h1>Technology used:<h1> 
 <p>•	Spring Tool Suite v2.3.4 (TST) <p>
 <p>•	Spring Web <p>
 <p>•	Spring Data JPA	<p>
