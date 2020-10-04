@@ -11,7 +11,6 @@ import org.springframework.transaction.annotation.Transactional;
 import com.br.ruriknj.dto.ClientDTO;
 import com.br.ruriknj.entities.Client;
 import com.br.ruriknj.repositories.ClientRepository;
-import com.br.ruriknj.resources.services.exceptions.EntityNotFoundException;
 
 //registrar a class como um componente de injeção de independencia (gerenciar as injeções de dependências)
 @Service
@@ -20,6 +19,7 @@ public class ClientService {
 	@Autowired
 	private ClientRepository repository;
 
+	
 	// Usando // Usando @Transactional(readOnly = true) e
 	// spring.jpa.open-in-view=false
 	// garante que tudo relacionado com banco de dados e JPA ficará na camada de
@@ -34,12 +34,11 @@ public class ClientService {
 		}
 		return listDTO; // passou a list do Client para o ClientDTO
 	}
-
+	
 	@Transactional(readOnly = true)
 	public ClientDTO findById(Long id) {
 		Optional<Client> obj = repository.findById(id); // optional -> evita trabalhar com valor nulo
-		Client entity = obj.orElseThrow(() -> new EntityNotFoundException("Cliente não encontrado"));
+		Client entity = obj.orElseThrow(() -> EntityNotFoundException("Cliente não existe");
 		return new ClientDTO(entity);
-	}
-
+ 	}
 }
