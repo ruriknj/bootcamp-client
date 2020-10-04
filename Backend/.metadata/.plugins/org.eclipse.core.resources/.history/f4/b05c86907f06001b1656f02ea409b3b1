@@ -36,13 +36,14 @@ public class Client implements Serializable {
 
 	}
 
-	public Client(Long id, String name, String cpf, Double income, Instant birthDate, Integer children) {
+	public Client(Long id, String name, String cpf, Double income, Instant birthDate, Integer children, Instant updatebirthDate) {
 		this.id = id;
 		this.name = name;
 		this.cpf = cpf;
 		this.income = income;
 		this.birthDate = birthDate;
 		this.children = children;
+		this.updatebirthDate = updatebirthDate.now();
 	}
 
 	public Long getId() {
@@ -100,17 +101,17 @@ public class Client implements Serializable {
 	public void setUpdatebirthDate(Instant updatebirthDate) {
 		this.updatebirthDate = updatebirthDate;
 	}
-
+	
 	@PrePersist
 	public void preSalvar() {
 		birthDate = Instant.now();
 	}
-
+	
 	@PreUpdate
 	public void preAtualizar() {
-		updatebirthDate = Instant.now();
-		// if (this.updatebirthDate == null) updatebirthDate = Instant.now();
-
+		 updatebirthDate = Instant.now();
+		//if (this.updatebirthDate == null) updatebirthDate = Instant.now();
+		
 	}
 
 	@Override

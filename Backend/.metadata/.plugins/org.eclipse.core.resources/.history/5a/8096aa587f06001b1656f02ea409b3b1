@@ -58,6 +58,7 @@ public class ClientService {
 		entity.setIncome(dto.getIncome());
 		entity.setBirthDate(dto.getBirthDate());
 		entity.setChildren(dto.getChildren());
+		entity.setUpdatebirthDate(dto.getUpdatebirthDate());
 		repository.save(entity);
 		return new ClientDTO(entity);
 	}

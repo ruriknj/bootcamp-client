@@ -86,4 +86,13 @@ public class ClientDTO implements Serializable {
 		this.children = children;
 	}
 
+	public Instant getUpdatebirthDate() {
+		return updatebirthDate;
+	}
+
+	public void setUpdatebirthDate(Instant updatebirthDate) {
+		this.updatebirthDate = updatebirthDate;
+		if (this.updatebirthDate == null) updatebirthDate = updatebirthDate.now();
+	}
+
 }

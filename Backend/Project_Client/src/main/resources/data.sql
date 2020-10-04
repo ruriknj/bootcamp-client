@@ -1,13 +1,13 @@
-INSERT INTO TB_CLIENT (birth_Date, children, cpf, income, name, updatebirth_date) VALUES (TIMESTAMP WITH TIME ZONE '1994-07-20T10:30:00Z', 2, '12345678901', 6500.0, 'Maria Silva', NOW());
-INSERT INTO TB_CLIENT (birth_Date, children, cpf, income, name) VALUES (TIMESTAMP WITH TIME ZONE '1994-07-20T10:30:00Z', 2, '12345678901', 6500.0, 'Maria Silva');
-INSERT INTO TB_CLIENT (birth_Date, children, cpf, income, name) VALUES (TIMESTAMP WITH TIME ZONE '1994-07-20T10:30:00Z', 2, '12345678901', 6500.0, 'Maria Silva');
-INSERT INTO TB_CLIENT (birth_Date, children, cpf, income, name) VALUES (TIMESTAMP WITH TIME ZONE '1994-07-20T10:30:00Z', 2, '12345678901', 6500.0, 'Maria Silva');
-INSERT INTO TB_CLIENT (birth_Date, children, cpf, income, name) VALUES (TIMESTAMP WITH TIME ZONE '1994-07-20T10:30:00Z', 2, '12345678901', 6500.0, 'Maria Silva');
-INSERT INTO TB_CLIENT (birth_Date, children, cpf, income, name) VALUES (TIMESTAMP WITH TIME ZONE '1994-07-20T10:30:00Z', 2, '12345678901', 6500.0, 'Maria Silva');
-INSERT INTO TB_CLIENT (birth_Date, children, cpf, income, name) VALUES (TIMESTAMP WITH TIME ZONE '1994-07-20T10:30:00Z', 2, '12345678901', 6500.0, 'Maria Silva');
-INSERT INTO TB_CLIENT (birth_Date, children, cpf, income, name) VALUES (TIMESTAMP WITH TIME ZONE '1994-07-20T10:30:00Z', 2, '12345678901', 6500.0, 'Maria Silva');
-INSERT INTO TB_CLIENT (birth_Date, children, cpf, income, name) VALUES (TIMESTAMP WITH TIME ZONE '1994-07-20T10:30:00Z', 2, '12345678901', 6500.0, 'Maria Silva');
-INSERT INTO TB_CLIENT (birth_Date, children, cpf, income, name) VALUES (TIMESTAMP WITH TIME ZONE '1994-07-20T10:30:00Z', 2, '12345678901', 6500.0, 'Maria Silva');
-INSERT INTO TB_CLIENT (birth_Date, children, cpf, income, name) VALUES (TIMESTAMP WITH TIME ZONE '1994-07-20T10:30:00Z', 2, '12345678901', 6500.0, 'Maria Silva');
-INSERT INTO TB_CLIENT (birth_Date, children, cpf, income, name) VALUES (TIMESTAMP WITH TIME ZONE '1994-07-20T10:30:00Z', 2, '12345678901', 6500.0, 'Maria Silva');
-
+INSERT INTO TB_CLIENT (birth_Date, children, cpf, income, name, updatebirth_date) VALUES (TIMESTAMP WITH TIME ZONE '1998-08-20T10:21:00Z', 2, '92345678901', 6500.0, 'Maria Silva', NOW());
+INSERT INTO TB_CLIENT (birth_Date, children, cpf, income, name, updatebirth_date) VALUES (TIMESTAMP WITH TIME ZONE '1996-09-20T10:20:00Z', 1, '72345678901', 1700.0, 'João Fragoso', NOW());
+INSERT INTO TB_CLIENT (birth_Date, children, cpf, income, name, updatebirth_date) VALUES (TIMESTAMP WITH TIME ZONE '2003-03-20T10:32:00Z', 3, '55545678901', 4500.0, 'Nicolau Marron', NOW());
+INSERT INTO TB_CLIENT (birth_Date, children, cpf, income, name, updatebirth_date) VALUES (TIMESTAMP WITH TIME ZONE '1995-12-20T10:44:00Z', 6, '12343678901',  500.0, 'Ana Clara', NOW());
+INSERT INTO TB_CLIENT (birth_Date, children, cpf, income, name, updatebirth_date) VALUES (TIMESTAMP WITH TIME ZONE '2004-11-20T10:11:00Z', 0, '12345676601', 7100.0, 'Cristovão Buarque', NOW());
+INSERT INTO TB_CLIENT (birth_Date, children, cpf, income, name, updatebirth_date) VALUES (TIMESTAMP WITH TIME ZONE '2002-10-20T10:22:00Z', 1, '12345678901', 9800.0, 'Maria Clara', NOW());
+INSERT INTO TB_CLIENT (birth_Date, children, cpf, income, name, updatebirth_date) VALUES (TIMESTAMP WITH TIME ZONE '1999-10-20T10:30:00Z', 2, '22345678901', 3800.0, 'Teodoro Carvalho', NOW());
+INSERT INTO TB_CLIENT (birth_Date, children, cpf, income, name, updatebirth_date) VALUES (TIMESTAMP WITH TIME ZONE '1994-05-20T10:35:00Z', 3, '32345676601', 2500.0, 'Gertrudes Lima', NOW());
+INSERT INTO TB_CLIENT (birth_Date, children, cpf, income, name, updatebirth_date) VALUES (TIMESTAMP WITH TIME ZONE '1994-07-20T10:22:00Z', 4, '12345674401', 1240.0, 'Carlos Santana', NOW());
+INSERT INTO TB_CLIENT (birth_Date, children, cpf, income, name, updatebirth_date) VALUES (TIMESTAMP WITH TIME ZONE '2001-01-20T10:30:00Z', 4, '52345678901', 3400.0, 'Juana Maranhão', NOW());
+INSERT INTO TB_CLIENT (birth_Date, children, cpf, income, name, updatebirth_date) VALUES (TIMESTAMP WITH TIME ZONE '1967-06-20T10:30:00Z', 5, '72345622201', 1200.0, 'Savio Linhares', NOW());
+INSERT INTO TB_CLIENT (birth_Date, children, cpf, income, name, updatebirth_date) VALUES (TIMESTAMP WITH TIME ZONE '1984-07-20T10:50:00Z', 3, '11115678901',  600.0, 'Mirtes de Moura', NOW());
+INSERT INTO TB_CLIENT (birth_Date, children, cpf, income, name, updatebirth_date) VALUES (TIMESTAMP WITH TIME ZONE '1995-01-20T10:40:00Z', 0, '12345678901', 1500.0, 'Fabio Correia', NOW());
