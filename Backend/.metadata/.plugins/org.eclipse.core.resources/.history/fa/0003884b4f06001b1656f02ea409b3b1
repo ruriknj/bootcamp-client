@@ -8,15 +8,12 @@ import java.util.Optional;
 import javax.persistence.EntityNotFoundException;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.dao.DataIntegrityViolationException;
-import org.springframework.dao.EmptyResultDataAccessException;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
 import com.br.ruriknj.dto.ClientDTO;
 import com.br.ruriknj.entities.Client;
 import com.br.ruriknj.repositories.ClientRepository;
-import com.br.ruriknj.resources.services.exceptions.DatabaseException;
 import com.br.ruriknj.resources.services.exceptions.ResourceNotFoundException;
 
 //registrar a class como um componente de injeção de independencia (gerenciar as injeções de dependências)
@@ -76,18 +73,6 @@ public class ClientService {
 			throw new ResourceNotFoundException("Id não encontrado " + id);
 		}
 
-	}
-
-	public void retirar(Long id) {
-
-		try {
-			repository.deleteById(id);
-		} catch (EmptyResultDataAccessException e) {
-			throw new ResourceNotFoundException("Id não encontrado " + id);
-		}
-		catch (DataIntegrityViolationException e) {
-			throw new DatabaseException("Violação de inegridade do banco de dados");
-		}
 	}
 
 }

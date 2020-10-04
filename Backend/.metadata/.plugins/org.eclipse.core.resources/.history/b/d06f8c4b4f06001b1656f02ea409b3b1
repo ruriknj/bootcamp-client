@@ -53,20 +53,20 @@ public class ClienteResource {
 	public ResponseEntity<ClientDTO> salvar(@RequestBody ClientDTO dto) {
 		dto = service.salvar(dto);
 		URI uri = ServletUriComponentsBuilder.fromCurrentRequest().path("/{id}").buildAndExpand(dto.getId()).toUri();
-
+				
 		return ResponseEntity.created(uri).body(dto);
-	}
-
+			}
+	
 	@PutMapping(value = "/{id}")
 	public ResponseEntity<ClientDTO> atualizar(@PathVariable Long id, @RequestBody ClientDTO dto) {
 		dto = service.atualizar(id, dto);
 		return ResponseEntity.ok().body(dto);
-	}
-
+			}
+	
 	@DeleteMapping(value = "/{id}")
 	public ResponseEntity<ClientDTO> retirar(@PathVariable Long id) {
 		service.retirar(id);
 		return ResponseEntity.noContent().build();
 	}
-
+	
 }
