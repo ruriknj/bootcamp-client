@@ -33,7 +33,7 @@ build/
 .vscode/
 
 .DS_Store
-.metadata
+../metadata
 .mvn
 mvnw
 mvnw.cmd
