@@ -1,6 +1,6 @@
 # Project CRUD Client
 
-<p>Project made by mayself.<p>
+<p>Project made by myself.<p>
 This was first task accomplished BootCamp course.
 
 # Technology used
