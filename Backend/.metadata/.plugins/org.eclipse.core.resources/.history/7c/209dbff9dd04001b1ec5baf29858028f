@@ -1,1 +1,0 @@
-INSERT INTO tb_client (name, cpf, income, birthDate, clhidren) VALUES ('MAria Silva', '12345678901', 6500..0, null, 3 );

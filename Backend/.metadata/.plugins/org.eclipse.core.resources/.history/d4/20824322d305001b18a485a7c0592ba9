@@ -1,5 +1,0 @@
-package com.br.ruriknj.resources.exception;
-
-public class StandardError {
-
-}
